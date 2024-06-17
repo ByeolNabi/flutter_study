@@ -4,13 +4,14 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        body: GradientContainer(),
+        body: const GradientContainer(),
       ),
     ),
   );
 }
 
 class GradientContainer extends StatelessWidget {
+  const GradientContainer({super.key});
   @override
   Widget build(context) {
     return Container(
