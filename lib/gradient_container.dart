@@ -40,6 +40,15 @@ class GradientContainer extends StatelessWidget {
             ),
             TextButton(
               onPressed: rollDice,
+              style: TextButton.styleFrom(
+                padding: const EdgeInsets.only( // padding을 줄 때는 only를 사용
+                  top: 20,
+                ),
+                foregroundColor: Colors.white,
+                textStyle: const TextStyle(
+                  fontSize: 28,
+                ),
+              ),
               child: const Text('Roll Dice'),
             ),
           ],
