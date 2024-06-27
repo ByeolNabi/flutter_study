@@ -38,12 +38,13 @@ class GradientContainer extends StatelessWidget {
               'assets/images/dice-2.png',
               width: 200,
             ),
+            const SizedBox(height:20), // 이처럼 사이즈박스를 사용하면 text와 homing박스가 자동을 맞춰진다.
             TextButton(
               onPressed: rollDice,
               style: TextButton.styleFrom(
-                padding: const EdgeInsets.only( // padding을 줄 때는 only를 사용
-                  top: 20,
-                ),
+                // padding: const EdgeInsets.only( // padding을 줄 때는 only를 사용
+                //   top: 20,
+                // ),
                 foregroundColor: Colors.white,
                 textStyle: const TextStyle(
                   fontSize: 28,
