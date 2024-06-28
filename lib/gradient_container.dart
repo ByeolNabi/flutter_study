@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_study/styledText.dart';
+import 'package:flutter_study/dice_roller.dart';
 
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomRight;
@@ -16,10 +16,6 @@ class GradientContainer extends StatelessWidget {
   final Color color1;
   final Color color2;
 
-  void rollDice() {
-    // ...
-  }
-
   @override
   Widget build(context) {
     return Container(
@@ -31,29 +27,7 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min, // Column의 요소를 중간으로 정렬
-          children: [
-            Image.asset(
-              'assets/images/dice-2.png',
-              width: 200,
-            ),
-            const SizedBox(height:20), // 이처럼 사이즈박스를 사용하면 text와 homing박스가 자동을 맞춰진다.
-            TextButton(
-              onPressed: rollDice,
-              style: TextButton.styleFrom(
-                // padding: const EdgeInsets.only( // padding을 줄 때는 only를 사용
-                //   top: 20,
-                // ),
-                foregroundColor: Colors.white,
-                textStyle: const TextStyle(
-                  fontSize: 28,
-                ),
-              ),
-              child: const Text('Roll Dice'),
-            ),
-          ],
-        ),
+        child: DiceRoller(),
       ),
     );
   }
