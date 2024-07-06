@@ -10,6 +10,20 @@ void main() {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('assets/images/quiz-logo.png', width: 200),
+              const SizedBox(height: 20),
+              const Text(
+                "Learn Flutter the fun way!",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 10),
+              ElevatedButton(
+                child: const Text('Fly me to the moon'),
+                onPressed: () {
+                  // ...
+                },
+              ),
             ],
           ),
         ),
