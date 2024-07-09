@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 
+import "package:flutter_study/start_screen.dart";
+
 void main() {
   runApp(
-    MaterialApp(
-      home: Scaffold(
+    const MaterialApp(
+        home: Scaffold(
+      body: StartScreen(),
+    )),
+  );
+}
+
+
+/*
+Scaffold(
         backgroundColor: Colors.deepPurple,
         body: Center(
           child: Column(
@@ -28,14 +38,4 @@ void main() {
           ),
         ),
       ),
-    ),
-  );
-}
-
-
-/*
-중앙에 정렬시키고 싶다.
-  center?
-세로로 정렬하고 싶다.
-  column?
  */
