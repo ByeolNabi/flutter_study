@@ -1,15 +1,35 @@
 import 'package:flutter/material.dart';
 
+import "package:flutter_study/start_screen.dart";
+
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
 
   @override
-  State<Quiz> createState() => _Quiz();
+  State<Quiz> createState() {
+    return _QuizState();
+  }
 }
 
-class _Quiz extends State<Quiz> {
+class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: const Color(0xFFFFE306));
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Color.fromARGB(255, 78, 13, 151),
+                Color.fromARGB(255, 107, 15, 168),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: const StartScreen(),
+        ),
+      ),
+    );
   }
 }
