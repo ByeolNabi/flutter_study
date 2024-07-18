@@ -4,12 +4,14 @@ class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key});
 
   @override
-  State<QuestionsScreen> createState() => _QuestionsScreen();
+  State<QuestionsScreen> createState() {
+    return _QuestionsScreenState();
+  }
 }
 
-class _QuestionsScreen extends State<QuestionsScreen> {
+class _QuestionsScreenState extends State<QuestionsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: const Color(0xFFFFE306));
+    return const Text('QuestionsScreen');
   }
 }
